@@ -31,7 +31,7 @@ python evaluate_video.py
 If models with optical flow is used, the following command is used instead:
 ```
 cd test
-python evaluate_video.py
+python evaluate_flow.py
 ```
 
 ## Other Information
