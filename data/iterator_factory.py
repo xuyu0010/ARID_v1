@@ -26,8 +26,8 @@ def get_arid(data_root='./dataset/ARID',
 
 	normalize = transforms.Normalize(mean=mean, std=std)
 
-	# train_sampler = sampler.RandomSampling(num=clip_length, interval=train_interval, speed=[1.0, 1.0], seed=(seed+0))
-	train_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=train_interval, fix_cursor=False, shuffle=True, seed=(seed+0))
+	train_sampler = sampler.RandomSampling(num=clip_length, interval=train_interval, speed=[1.0, 1.0], seed=(seed+0))
+	# train_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=train_interval, fix_cursor=False, shuffle=True, seed=(seed+0))
 	train = VideoIter(video_prefix=os.path.join(data_root, 'raw', 'data'),
 					  txt_list=os.path.join(data_root, 'raw', 'list_cvt', 'ARID_split1_train.txt'),
 					  sampler=train_sampler,
@@ -50,8 +50,8 @@ def get_arid(data_root='./dataset/ARID',
 					  shuffle_list_seed=(seed+2),
 					  )
 
-	# val_sampler = sampler.SequentialSampling(num=clip_length, interval=val_interval, fix_cursor=True, shuffle=True)
-	val_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=val_interval, fix_cursor=True, shuffle=True)
+	val_sampler = sampler.SequentialSampling(num=clip_length, interval=val_interval, fix_cursor=True, shuffle=True)
+	# val_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=val_interval, fix_cursor=True, shuffle=True)
 	val   = VideoIter(video_prefix=os.path.join(data_root, 'raw', 'data'),
 					  txt_list=os.path.join(data_root, 'raw', 'list_cvt', 'ARID_split1_test.txt'),
 					  sampler=val_sampler,
@@ -89,8 +89,8 @@ def get_arid_flow(data_root='./dataset/ARID',
 
 	# normalize = transforms.Normalize(mean=mean, std=std)
 
-	# train_sampler = sampler.RandomSampling(num=clip_length, interval=train_interval, speed=[1.0, 1.0], seed=(seed+0))
-	train_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=train_interval, fix_cursor=False, shuffle=True, seed=(seed+0))
+	train_sampler = sampler.RandomSampling(num=clip_length, interval=train_interval, speed=[1.0, 1.0], seed=(seed+0))
+	# train_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=train_interval, fix_cursor=False, shuffle=True, seed=(seed+0))
 	train = FlowIter(video_prefix=os.path.join(data_root, 'raw', 'flow'),
 					  txt_list=os.path.join(data_root, 'raw', 'list_cvt', 'ARID_split1_train.txt'),
 					  sampler=train_sampler,
@@ -109,8 +109,8 @@ def get_arid_flow(data_root='./dataset/ARID',
 					  shuffle_list_seed=(seed+2),
 					  )
 
-	# val_sampler = sampler.SequentialSampling(num=clip_length, interval=val_interval, fix_cursor=True, shuffle=True)
-	val_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=val_interval, fix_cursor=True, shuffle=True)
+	val_sampler = sampler.SequentialSampling(num=clip_length, interval=val_interval, fix_cursor=True, shuffle=True)
+	# val_sampler = sampler.SegmentalSampling(num_per_seg=clip_length, segments=segments, interval=val_interval, fix_cursor=True, shuffle=True)
 	val   = FlowIter(video_prefix=os.path.join(data_root, 'raw', 'flow'),
 					  txt_list=os.path.join(data_root, 'raw', 'list_cvt', 'ARID_split1_test.txt'),
 					  sampler=val_sampler,

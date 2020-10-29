@@ -76,9 +76,9 @@ parser.add_argument('--world-size', default=1, type=int,
 parser.add_argument('--dist-url', default='tcp://192.168.0.11:23456', type=str,
                     help='url used to set up distributed training')
 # dark dataset config
-parser.add_argument('--is-dark', default=True, type=bool)
-parser.add_argument('--use-flow', default=True, type=bool)
-parser.add_argument('--use-segments', default=True, type=bool)
+parser.add_argument('--is-dark', action='store_true')
+parser.add_argument('--use-flow', action='store_true')
+parser.add_argument('--use-segments', action='store_true')
 parser.add_argument('--segments', default=3, type=int)
 
 def autofill(args):
