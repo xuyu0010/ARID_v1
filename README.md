@@ -16,7 +16,7 @@ scikit-video (optional for optical flow)
 
 Train with initialization from pre-trained models:
 ```
-python train_aid11.py
+python train_arid11.py --network <Network Name> --is-dark
 ```
 There are a number of parameters that can be further tuned. We recommend a batch size of 16 per GPU.
 We provide several networks that can be utilized, and can be found in the ```/network``` folder, change the ```--network``` parameter to toggle through the networks
