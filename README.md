@@ -36,7 +36,8 @@ python evaluate_flow.py
 
 ## Other Information
 
-- To download our dataset, click on [this link](https://xuyu0010.github.io/arid.html)
+<!-- - To download our dataset, click on [this link](https://xuyu0010.github.io/arid.html) -->
+- To download the dataset, please write to xuyu0014@e.ntu.edu.sg for the download link. Thank you! [__Update!__]
 - To view our paper, go to [this arxiv link](http://arxiv.org/abs/2006.03876)
 - If you find our paper useful, please cite our paper:
 ```
